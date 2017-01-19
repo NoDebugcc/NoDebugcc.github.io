@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS3-2 | Link‘s 博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="渐变linear-gradient  线性渐变
+常用属性值：
+
+
+
+示例代码
+
+12345678#dv &amp;#123;        width: 100%;        height: 500px;        /*向下，颜色从灰色向黑色渐变*/        /*background: linear-gradient(to bottom,#ccc,#000);*/        /*线性渐变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3-2">
+<meta property="og:url" content="http://yoursite.com/2014/09/14/CSS3-2/index.html">
+<meta property="og:site_name" content="Link‘s 博客">
+<meta property="og:description" content="渐变linear-gradient  线性渐变
+常用属性值：
+
+
+
+示例代码
+
+12345678#dv &amp;#123;        width: 100%;        height: 500px;        /*向下，颜色从灰色向黑色渐变*/        /*background: linear-gradient(to bottom,#ccc,#000);*/        /*线性渐变">
+<meta property="og:image" content="http://yoursite.com/../img/linear-gradient属性值.png">
+<meta property="og:image" content="http://yoursite.com/../img/径向渐变.png">
+<meta property="og:image" content="http://yoursite.com/../img/background属性值.png">
+<meta property="og:image" content="http://yoursite.com/../img/border-image属性值.png">
+<meta property="og:image" content="http://yoursite.com/../img/transition属性值.png">
+<meta property="og:image" content="http://yoursite.com/../img/transform属性值.png">
+<meta property="og:updated_time" content="2017-01-19T05:48:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3-2">
+<meta name="twitter:description" content="渐变linear-gradient  线性渐变
+常用属性值：
+
+
+
+示例代码
+
+12345678#dv &amp;#123;        width: 100%;        height: 500px;        /*向下，颜色从灰色向黑色渐变*/        /*background: linear-gradient(to bottom,#ccc,#000);*/        /*线性渐变">
+<meta name="twitter:image" content="http://yoursite.com/../img/linear-gradient属性值.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Link‘s 博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/aa.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">CJ</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="/946913179@qq.com" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/NoDebugcc" title="github">github</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/SeriousL">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱篮球、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱敲代码！</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">CJ</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/aa.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">CJ</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="/946913179@qq.com" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/NoDebugcc" title="github">github</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-CSS3-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/14/CSS3-2/" class="article-date">
+      <time datetime="2014-09-13T16:00:00.000Z" itemprop="datePublished">2014-09-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS3-2
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><h3 id="linear-gradient-线性渐变"><a href="#linear-gradient-线性渐变" class="headerlink" title="linear-gradient  线性渐变"></a><strong>linear-gradient</strong>  线性渐变</h3><ul>
+<li>常用属性值：</li>
+</ul>
+<p><img src="../img/linear-gradient属性值.png" alt="属性值"></p>
+<ul>
+<li>示例代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#dv &#123;</div><div class="line">        width: 100%;</div><div class="line">        height: 500px;</div><div class="line">        /*向下，颜色从灰色向黑色渐变*/</div><div class="line">        /*background: linear-gradient(to bottom,#ccc,#000);*/</div><div class="line">        /*线性渐变可以填写多个值，当填写百分比时候不会产生渐变效果*/</div><div class="line">        background: linear-gradient(45deg,red 30%,yellow 30%,yellow 60%,skyblue 60%);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>附带知识点 ：</p>
+<ul>
+<li><p>background-size  可以设置背景图的大小</p>
+</li>
+<li><p>进行background进行背景的设置，生成的是背景图片</p>
+</li>
+</ul>
+<h3 id="radial-gradient-径向渐变"><a href="#radial-gradient-径向渐变" class="headerlink" title="radial-gradient  径向渐变"></a><strong>radial-gradient</strong>  径向渐变</h3><ul>
+<li>常用属性值 ：</li>
+</ul>
+<p><img src="../img/径向渐变.png" alt="属性值"></p>
+<ul>
+<li>示例代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.dv1 &#123;</div><div class="line">            /*circle 是一个圆，at center指的是圆心在正中间，颜色是从圆心向外扩散*/</div><div class="line">            background: radial-gradient(at center,red 20%,black 20%,black 80%,yellow 80%);</div><div class="line">        &#125;</div><div class="line">        .dv2 &#123;</div><div class="line">            /*在at前不设置距离圆心半径多少默认为正圆，at可以设置圆心的位置*/</div><div class="line">            background: radial-gradient(at top left,red 20%,black 20%,black 80%,yellow 80%);</div><div class="line">        &#125;</div><div class="line">        .dv3 &#123;</div><div class="line">            /*在at前可以设置半径距离多少，第一个参数代表x轴方向，第二个参数代表y轴方向*/</div><div class="line">            background: radial-gradient(100px 50px at center,black 50%,orange 50%);</div><div class="line">        &#125;</div><div class="line">        .dv4 &#123;</div><div class="line">            background: radial-gradient(100px 50px at top right,black,orange);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<h2 id="body设置注意事项"><a href="#body设置注意事项" class="headerlink" title="body设置注意事项"></a><strong>body</strong>设置注意事项</h2><ul>
+<li><p>body是没有高度的，是被子元素撑开的，当设置高度100%时，其父元素html也需要设置高度==浏览器高度==100%</p>
+</li>
+<li><p>body高度设置为100%时，其默认属性margin等属性会增加body的宽高，故而出现滚动条，解决方法是将其margin等默认属性去除</p>
+</li>
+</ul>
+<h2 id="background-新属性"><a href="#background-新属性" class="headerlink" title="background 新属性"></a><strong>background</strong> 新属性</h2><ul>
+<li><p>属性值<br><img src="../img/background属性值.png" alt="属性值"></p>
+</li>
+<li><p>示例代码</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">#dv &#123;</div><div class="line">           width: 300px;</div><div class="line">           height: 500px;</div><div class="line">           border: 1px solid black;</div><div class="line">           /*background可以为一个元素设置多个背景图，多个背景图用逗号分隔，同时也可以设置背景图的大小*/</div><div class="line">           background: url(../源代码/img/lyf.jpg) top left/100px 100px,</div><div class="line">           url("../源代码/img/lyf.jpg") top center/100px 100px,</div><div class="line">           url("../源代码/img/lyf.jpg") top right/100px 100px;</div><div class="line">           background-repeat:no-repeat; </div><div class="line">           /*contain可以将背景图等比例放大，只要有一边顶格，就会停止放大*/</div><div class="line">           background: url("../源代码/img/lyf.jpg") no-repeat;</div><div class="line">           background-size: contain;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+<h2 id="border-image-新属性"><a href="#border-image-新属性" class="headerlink" title="border-image 新属性"></a><strong>border-image</strong> 新属性</h2><ul>
+<li>属性值</li>
+</ul>
+<p><img src="../img/border-image属性值.png" alt="属性值"></p>
+<ul>
+<li>示例代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*边框背景图*/</div><div class="line">    border-image-source: url(../源代码/img/border_heart.png);</div><div class="line">/*将边框背景图进行切割*/</div><div class="line">    border-image-slice: 27 27;</div><div class="line">/*边框的宽度*/</div><div class="line">    border-image-width: 20px;</div><div class="line">/*设置图片拉伸方式，round在不破坏图片完整性平铺*/</div><div class="line">    border-image-repeat: round;</div></pre></td></tr></table></figure>
+<h2 id="transition-过渡动画"><a href="#transition-过渡动画" class="headerlink" title="transition  过渡动画"></a><strong>transition</strong>  过渡动画</h2><ul>
+<li>属性值</li>
+</ul>
+<p><img src="../img/transition属性值.png" alt="属性值"><br>​<br>        transition的连写形式:属性值(width、height等)  延迟时间  过渡时间  过渡形式(默认ease、easein、easeout、easeinout、linear匀速、贝塞尔曲线)</p>
+<ul>
+<li>示例代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#dv &#123;</div><div class="line">    width: 200px;</div><div class="line">    height: 100px;</div><div class="line">    /*属性 延迟时间 过渡动画 过渡方式*/</div><div class="line">    transition: width 1s linear,</div><div class="line">                height 1s 1s linear,</div><div class="line">                background 2s 2s; </div><div class="line">    background-color: yellow;</div><div class="line">&#125;</div><div class="line">#dv:hover &#123;</div><div class="line">    width: 400px;</div><div class="line">    height: 300px;</div><div class="line">    background-color: red;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>步骤动画</p>
+<pre><code>transition： all 1s steps(7)
+steps(值)属性指以某一数值步数进行过渡动画
+</code></pre></li>
+<li><p>示例代码</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"> #dv &#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 100px;</div><div class="line">    /*过渡动画将过渡效果分为步数来走动，下方是分为700步*/</div><div class="line">    transition: all 7s steps(700);</div><div class="line">    background-color: pink;</div><div class="line">&#125;</div><div class="line">#dv:hover &#123;</div><div class="line">    width: 800px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="transform"><a href="#transform" class="headerlink" title="transform"></a><strong>transform</strong></h2><ul>
+<li>属性值</li>
+</ul>
+<p><img src="../img/transform属性值.png" alt="属性值"></p>
+<ul>
+<li>示例代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/*translate 2D移动，(translateX)第一个参数是X轴方向移动，(translateY)第二个参数是Y轴移动。*/</div><div class="line">transform: translate(200px,200px);</div><div class="line"></div><div class="line">/*rotate 3D旋转 X/Y/Z是旋转的方向，如果rotate后不加方向默认是Z轴，必要时，需要配合设置旋转中心(transform-origin)使用*/</div><div class="line">transform: rotate(60deg);</div><div class="line">transform: rotateX(60deg);</div><div class="line">transform: rotateY(60deg);</div><div class="line">transform: rotateZ(60deg);</div><div class="line"></div><div class="line">/*scale  缩放  scaleX  scaleY*/</div><div class="line">transform: scale(.1,.1);</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2014/09/14/CSS3-2/">CSS3-2</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 CJ 的个人博客">CJ</a></p>
+        <p><span>发布时间:</span>2014年09月14日 - 00时00分</p>
+        <p><span>最后更新:</span>2017年01月19日 - 13时48分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2014/09/14/CSS3-2/" title="CSS3-2">http://yoursite.com/2014/09/14/CSS3-2/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2014/09/14/CSS3-2/　　作者: CJ" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2014/09/07/CSS3-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS3-1</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#渐变"><span class="toc-number">1.</span> <span class="toc-text">渐变</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#linear-gradient-线性渐变"><span class="toc-number">1.1.</span> <span class="toc-text">linear-gradient  线性渐变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#radial-gradient-径向渐变"><span class="toc-number">1.2.</span> <span class="toc-text">radial-gradient  径向渐变</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#body设置注意事项"><span class="toc-number">2.</span> <span class="toc-text">body设置注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#background-新属性"><span class="toc-number">3.</span> <span class="toc-text">background 新属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#border-image-新属性"><span class="toc-number">4.</span> <span class="toc-text">border-image 新属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#transition-过渡动画"><span class="toc-number">5.</span> <span class="toc-text">transition  过渡动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#transform"><span class="toc-number">6.</span> <span class="toc-text">transform</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2014/09/14/CSS3-2/" data-title="CSS3-2" data-url="http://yoursite.com/2014/09/14/CSS3-2/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2014/09/07/CSS3-1/" title="下一篇: CSS3-1">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2014/09/14/CSS3-2/">CSS3-2</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/07/CSS3-1/">CSS3-1</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/01/HTML5/">HTML5标签</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 CJ
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >大神到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 13;
+            var backgroundimg = "url(/background/bg-" + backgroundnum +".jpg)";
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

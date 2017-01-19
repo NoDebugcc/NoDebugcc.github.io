@@ -3,14 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Link‘s 博客</title>
+  <title>CSS3-1 | Link‘s 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Link‘s 博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="CSS3CSS3兄弟选择器
+以选择器1~选择器2的形式，查找选择器1之后的所有选择器2
+
+
+示例代码 在class为.first之后的所有class为.meat的元素背景颜色会变为红色 需要注意的是,之前的并不会获取到1234567891011121314151617181920212223&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3-1">
+<meta property="og:url" content="http://yoursite.com/2014/09/07/CSS3-1/index.html">
 <meta property="og:site_name" content="Link‘s 博客">
+<meta property="og:description" content="CSS3CSS3兄弟选择器
+以选择器1~选择器2的形式，查找选择器1之后的所有选择器2
+
+
+示例代码 在class为.first之后的所有class为.meat的元素背景颜色会变为红色 需要注意的是,之前的并不会获取到1234567891011121314151617181920212223&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt">
+<meta property="og:image" content="http://yoursite.com/../img/属性选择器.png">
+<meta property="og:image" content="http://yoursite.com/../img/text-=shadow效果图.png">
+<meta property="og:updated_time" content="2017-01-19T05:42:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Link‘s 博客">
+<meta name="twitter:title" content="CSS3-1">
+<meta name="twitter:description" content="CSS3CSS3兄弟选择器
+以选择器1~选择器2的形式，查找选择器1之后的所有选择器2
+
+
+示例代码 在class为.first之后的所有class为.meat的元素背景颜色会变为红色 需要注意的是,之前的并不会获取到1234567891011121314151617181920212223&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt">
+<meta name="twitter:image" content="http://yoursite.com/../img/属性选择器.png">
   
     <link rel="alternative" href="/atom.xml" title="Link‘s 博客" type="application/atom+xml">
   
@@ -24,9 +43,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -38,8 +54,8 @@
           rootUrl: '/',
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -207,130 +223,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-CSS3-2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/09/14/CSS3-2/" class="article-date">
-      <time datetime="2014-09-13T16:00:00.000Z" itemprop="datePublished">2014-09-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/14/CSS3-2/">CSS3-2</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><h3 id="linear-gradient-线性渐变"><a href="#linear-gradient-线性渐变" class="headerlink" title="linear-gradient  线性渐变"></a><strong>linear-gradient</strong>  线性渐变</h3><ul>
-<li>常用属性值：</li>
-</ul>
-<p><img src="../img/linear-gradient属性值.png" alt="属性值"></p>
-<ul>
-<li>示例代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#dv &#123;</div><div class="line">        width: 100%;</div><div class="line">        height: 500px;</div><div class="line">        /*向下，颜色从灰色向黑色渐变*/</div><div class="line">        /*background: linear-gradient(to bottom,#ccc,#000);*/</div><div class="line">        /*线性渐变可以填写多个值，当填写百分比时候不会产生渐变效果*/</div><div class="line">        background: linear-gradient(45deg,red 30%,yellow 30%,yellow 60%,skyblue 60%);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>附带知识点 ：</p>
-<ul>
-<li><p>background-size  可以设置背景图的大小</p>
-</li>
-<li><p>进行background进行背景的设置，生成的是背景图片</p>
-</li>
-</ul>
-<h3 id="radial-gradient-径向渐变"><a href="#radial-gradient-径向渐变" class="headerlink" title="radial-gradient  径向渐变"></a><strong>radial-gradient</strong>  径向渐变</h3><ul>
-<li>常用属性值 ：</li>
-</ul>
-<p><img src="../img/径向渐变.png" alt="属性值"></p>
-<ul>
-<li>示例代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.dv1 &#123;</div><div class="line">            /*circle 是一个圆，at center指的是圆心在正中间，颜色是从圆心向外扩散*/</div><div class="line">            background: radial-gradient(at center,red 20%,black 20%,black 80%,yellow 80%);</div><div class="line">        &#125;</div><div class="line">        .dv2 &#123;</div><div class="line">            /*在at前不设置距离圆心半径多少默认为正圆，at可以设置圆心的位置*/</div><div class="line">            background: radial-gradient(at top left,red 20%,black 20%,black 80%,yellow 80%);</div><div class="line">        &#125;</div><div class="line">        .dv3 &#123;</div><div class="line">            /*在at前可以设置半径距离多少，第一个参数代表x轴方向，第二个参数代表y轴方向*/</div><div class="line">            background: radial-gradient(100px 50px at center,black 50%,orange 50%);</div><div class="line">        &#125;</div><div class="line">        .dv4 &#123;</div><div class="line">            background: radial-gradient(100px 50px at top right,black,orange);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-<h2 id="body设置注意事项"><a href="#body设置注意事项" class="headerlink" title="body设置注意事项"></a><strong>body</strong>设置注意事项</h2><ul>
-<li><p>body是没有高度的，是被子元素撑开的，当设置高度100%时，其父元素html也需要设置高度==浏览器高度==100%</p>
-</li>
-<li><p>body高度设置为100%时，其默认属性margin等属性会增加body的宽高，故而出现滚动条，解决方法是将其margin等默认属性去除</p>
-</li>
-</ul>
-<h2 id="background-新属性"><a href="#background-新属性" class="headerlink" title="background 新属性"></a><strong>background</strong> 新属性</h2><ul>
-<li><p>属性值<br><img src="../img/background属性值.png" alt="属性值"></p>
-</li>
-<li><p>示例代码</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">#dv &#123;</div><div class="line">           width: 300px;</div><div class="line">           height: 500px;</div><div class="line">           border: 1px solid black;</div><div class="line">           /*background可以为一个元素设置多个背景图，多个背景图用逗号分隔，同时也可以设置背景图的大小*/</div><div class="line">           background: url(../源代码/img/lyf.jpg) top left/100px 100px,</div><div class="line">           url("../源代码/img/lyf.jpg") top center/100px 100px,</div><div class="line">           url("../源代码/img/lyf.jpg") top right/100px 100px;</div><div class="line">           background-repeat:no-repeat; </div><div class="line">           /*contain可以将背景图等比例放大，只要有一边顶格，就会停止放大*/</div><div class="line">           background: url("../源代码/img/lyf.jpg") no-repeat;</div><div class="line">           background-size: contain;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
-<h2 id="border-image-新属性"><a href="#border-image-新属性" class="headerlink" title="border-image 新属性"></a><strong>border-image</strong> 新属性</h2><ul>
-<li>属性值</li>
-</ul>
-<p><img src="../img/border-image属性值.png" alt="属性值"></p>
-<ul>
-<li>示例代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*边框背景图*/</div><div class="line">    border-image-source: url(../源代码/img/border_heart.png);</div><div class="line">/*将边框背景图进行切割*/</div><div class="line">    border-image-slice: 27 27;</div><div class="line">/*边框的宽度*/</div><div class="line">    border-image-width: 20px;</div><div class="line">/*设置图片拉伸方式，round在不破坏图片完整性平铺*/</div><div class="line">    border-image-repeat: round;</div></pre></td></tr></table></figure>
-<h2 id="transition-过渡动画"><a href="#transition-过渡动画" class="headerlink" title="transition  过渡动画"></a><strong>transition</strong>  过渡动画</h2><ul>
-<li>属性值</li>
-</ul>
-<p><img src="../img/transition属性值.png" alt="属性值"><br>​<br>        transition的连写形式:属性值(width、height等)  延迟时间  过渡时间  过渡形式(默认ease、easein、easeout、easeinout、linear匀速、贝塞尔曲线)</p>
-<ul>
-<li>示例代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#dv &#123;</div><div class="line">    width: 200px;</div><div class="line">    height: 100px;</div><div class="line">    /*属性 延迟时间 过渡动画 过渡方式*/</div><div class="line">    transition: width 1s linear,</div><div class="line">                height 1s 1s linear,</div><div class="line">                background 2s 2s; </div><div class="line">    background-color: yellow;</div><div class="line">&#125;</div><div class="line">#dv:hover &#123;</div><div class="line">    width: 400px;</div><div class="line">    height: 300px;</div><div class="line">    background-color: red;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>步骤动画</p>
-<pre><code>transition： all 1s steps(7)
-steps(值)属性指以某一数值步数进行过渡动画
-</code></pre></li>
-<li><p>示例代码</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"> #dv &#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 100px;</div><div class="line">    /*过渡动画将过渡效果分为步数来走动，下方是分为700步*/</div><div class="line">    transition: all 7s steps(700);</div><div class="line">    background-color: pink;</div><div class="line">&#125;</div><div class="line">#dv:hover &#123;</div><div class="line">    width: 800px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="transform"><a href="#transform" class="headerlink" title="transform"></a><strong>transform</strong></h2><ul>
-<li>属性值</li>
-</ul>
-<p><img src="../img/transform属性值.png" alt="属性值"></p>
-<ul>
-<li>示例代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/*translate 2D移动，(translateX)第一个参数是X轴方向移动，(translateY)第二个参数是Y轴移动。*/</div><div class="line">transform: translate(200px,200px);</div><div class="line"></div><div class="line">/*rotate 3D旋转 X/Y/Z是旋转的方向，如果rotate后不加方向默认是Z轴，必要时，需要配合设置旋转中心(transform-origin)使用*/</div><div class="line">transform: rotate(60deg);</div><div class="line">transform: rotateX(60deg);</div><div class="line">transform: rotateY(60deg);</div><div class="line">transform: rotateZ(60deg);</div><div class="line"></div><div class="line">/*scale  缩放  scaleX  scaleY*/</div><div class="line">transform: scale(.1,.1);</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-CSS3-1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSS3-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2014/09/07/CSS3-1/" class="article-date">
@@ -346,12 +239,19 @@ steps(值)属性指以某一数值步数进行过渡动画
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/07/CSS3-1/">CSS3-1</a>
+    <h1 class="article-title" itemprop="name">
+      CSS3-1
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -451,122 +351,158 @@ steps(值)属性指以某一数值步数进行过渡动画
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-HTML5" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/09/01/HTML5/" class="article-date">
-      <time datetime="2014-08-31T16:00:00.000Z" itemprop="datePublished">2014-09-01</time>
-</a>
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2014/09/07/CSS3-1/">CSS3-1</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 CJ 的个人博客">CJ</a></p>
+        <p><span>发布时间:</span>2014年09月07日 - 00时00分</p>
+        <p><span>最后更新:</span>2017年01月19日 - 13时42分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2014/09/07/CSS3-1/" title="CSS3-1">http://yoursite.com/2014/09/07/CSS3-1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2014/09/07/CSS3-1/　　作者: CJ" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
+
+
+
+<nav id="article-nav">
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <a href="/2014/09/14/CSS3-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
         
+          CSS3-2
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/01/HTML5/">HTML5标签</a>
-    </h1>
   
+    <a href="/2014/09/01/HTML5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML5标签</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="HTML5第一天"><a href="#HTML5第一天" class="headerlink" title="HTML5第一天"></a>HTML5第一天</h1><h2 id="以往HTML版本的风格界面"><a href="#以往HTML版本的风格界面" class="headerlink" title="以往HTML版本的风格界面"></a>以往HTML版本的风格界面</h2><p>1.HTML5    html5页面结构生成 !+tab 或者 html:5+tab<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>2.HTML:xt    过渡版本，HTML5之前，使用最频繁<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">xml:lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>3.HTML:4s  HTML4严格版本<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>4.HTML:4t<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="HTML5新语义化标签"><a href="#HTML5新语义化标签" class="headerlink" title="HTML5新语义化标签"></a>HTML5新语义化标签</h2><h3 id="新语义化标签的出现有利于SEO的优化，并且避免了命名问题"><a href="#新语义化标签的出现有利于SEO的优化，并且避免了命名问题" class="headerlink" title="新语义化标签的出现有利于SEO的优化，并且避免了命名问题"></a>新语义化标签的出现有利于SEO的优化，并且避免了命名问题</h3><p>1.header<br>    注意：IE8以及更早的版本不支持header标签<br>    作用：主要用于定义文档的页眉</p>
-<p>2.nav<br>    注意：IE8以及更早的版本不支持nav标签<br>    作用：定义导航链接的部分</p>
-<p>3.main<br>    注意：IE浏览器各种版本都不支持<br>    作用：定义页面主体部分</p>
-<p>4.aside<br>    注意：IE8以及更早的版本不支持aside标签<br>    作用：定义其所处内容之外的内容，标签内内容应该与附近的内容相关。可用作侧边栏。</p>
-<p>5.article<br>    注意：IE8以及更早的版本不支持article标签<br>    作用：规定独立的自包含内容。作用相当与div</p>
-<p>6.section<br>    注意：IE8以及更早的版本不支持section标签<br>    作用：定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</p>
-<p>7.footer<br>    注意：IE8以及更早的版本不支持footer标签<br>    作用：<footer> 标签定义文档或节的页脚。<footer> 元素应当含有其包含元素的信息。页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。可以在一个文档中使用多个 <footer> 元素。</footer></footer></footer></p>
-<h2 id="低版本IE浏览器新语义标签的兼容写法"><a href="#低版本IE浏览器新语义标签的兼容写法" class="headerlink" title="低版本IE浏览器新语义标签的兼容写法"></a>低版本IE浏览器新语义标签的兼容写法</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  less</div><div class="line">  than</div><div class="line">  equal</div><div class="line"> --&gt;表示的是小于等于</div><div class="line"> </div><div class="line">  <span class="comment">&lt;!-- gte</span></div><div class="line">  greater</div><div class="line">  than</div><div class="line">  equal</div><div class="line">  --&gt;表示的是大于等于</div><div class="line">  </div><div class="line"><span class="comment">&lt;!--[if lte IE 8]&gt;</span></div><div class="line">    &lt;p&gt;哥们,你的浏览器版本太低了建议更新,下载更为好用的360安全浏览器&lt;/p&gt;</div><div class="line">    &lt;a href="#"&gt;戳我呀,就可以下载了哦 ^_^&lt;/a&gt;</div><div class="line">  &lt;![endif]--&gt;表示IE浏览器版本低于8才会显示的内容</div><div class="line">  </div><div class="line">检测浏览器版本的写法是cc:ie6+tab</div><div class="line">低版本IE浏览器新语义标签的写法如下：</div><div class="line"><span class="comment">&lt;!--[if lte IE 8]&gt;</span></div><div class="line">  &lt;script&gt;</div><div class="line">    var headerDom = document.createElement('header');  创建该元素</div><div class="line">    document.body.appendChild(headerDom);  追加到页面中</div><div class="line">    headerDom.style.display = 'block';  创建的元素必须加上display:block;</div><div class="line">    console.log('我调用了');</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
-<h2 id="多媒体标签的基本使用"><a href="#多媒体标签的基本使用" class="headerlink" title="多媒体标签的基本使用"></a>多媒体标签的基本使用</h2><blockquote>
-<p>audio<br>    注意：IE8以及更早的版本不支持audio标签<br>        在低版本不支持该标签的情况下可以如下设置<br>        <audio src="someaudio.wav"><br>        您的浏览器不支持 audio 标签。<br>        </audio><br>    作用：播放音频。<br>    属性：autoplay   音频在就绪后马上播放，自动播放<br>         controls    向用户显示控件，比如播放按钮<br>         loop        循环播放<br>         muted        规定视频输出应该被静音</p>
-<p>video<br>    注意：IE8以及更早的版本不支持video标签<br>        在低版本不支持该标签的情况下可以如下设置<br>        <video src="movie.ogg" controls="controls"><br>        您的浏览器不支持 video 标签。<br>        </video><br>    作用：播放视频<br>    属性：autoplay   音频在就绪后马上播放，自动播放<br>         controls    向用户显示控件，比如播放按钮<br>         height        设置播放器的高度<br>         width        设置播放器的宽度   为了播放效果，不会拉伸视频<br>         loop        循环播放<br>         muted        规定视频输出应该被静音<br>         poster        规定视频下载显示的图像，或者用户在点击播放按钮前显示的图像</p>
-<p>source<br>    注意：IE8以及更早的版本不支持source标签<br>    作用：使用不同的媒介源，为了让不同的浏览器都能够播放<br>        <audio controls><br>        <source src="horse.ogg" type="audio/ogg"><br>        <source src="horse.mp3" type="audio/mpeg"><br>        Your browser does not support the audio element.<br>        </audio> </p>
-</blockquote>
-<p>浏览器主流的播放器还是flash来播放，video播放的是 短视频 不牵扯到 版权的 广告,宣传片。移动端大部分多媒体播放都是使用video  audio播放，自带的controls在不同的浏览器显示效果不同，一般配合js自定义控制栏</p>
-<h2 id="HTML5新表单控件"><a href="#HTML5新表单控件" class="headerlink" title="HTML5新表单控件"></a>HTML5新表单控件</h2><p><img src="../img/浏览器各版本对表单属性的支持.png" alt="浏览器各版本对表单属性的支持"></p>
-<pre><code>type：
-1.email   在提交表单的时候自动验证email域中的值
-2.color      用户可在页面中调出调色板
-3.date      用户可在页面中选择日期
-4.tel      在PC端页面无效果显示，在移动端，会显示九宫格数字键盘
-5.number  只能输入数字，还可以设置数字的限定  &lt;input type=&quot;number&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;
-6.search  搜索域
-7.range      显示为滑动条，&lt;input type=&quot;range&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;
-</code></pre><h2 id="自定义进度条"><a href="#自定义进度条" class="headerlink" title="自定义进度条"></a>自定义进度条</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;range&quot;).oninput=function ()&#123;</div><div class="line">        var rangeDom=document.getElementById(&quot;range&quot;);</div><div class="line">        var num=rangeDom.value;</div><div class="line">        document.getElementById(&quot;step&quot;).style.width=num+&quot;%&quot;;</div><div class="line">        if(num&gt;50)&#123;</div><div class="line">            document.getElementById(&quot;step&quot;).style.backgroundColor=&quot;red&quot;;</div><div class="line">        &#125;else &#123;</div><div class="line">            document.getElementById(&quot;step&quot;).style.backgroundColor=&quot;red&quot;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h2 id="querySelector与querySelectorAll的用法"><a href="#querySelector与querySelectorAll的用法" class="headerlink" title="querySelector与querySelectorAll的用法"></a>querySelector与querySelectorAll的用法</h2><pre><code>querySelector：传入一个css选择器，获取满足条件的第一个元素，返回的值是DOM元素
-querySelectorAll：获取的是一个数组
-</code></pre><h2 id="类名操作–classList-函数"><a href="#类名操作–classList-函数" class="headerlink" title="类名操作–classList()函数"></a>类名操作–classList()函数</h2><pre><code>dom.classList()
-属性：classList.add(&quot;&quot;);     添加类名
-     classList.remove(&quot;&quot;)      删除类名
-     classList.contains(&quot;&quot;)    判断类名是否存在
-     classList.toggle(&quot;&quot;)    切换类名![classList的用法]
-</code></pre><p><img src="../img/classList的用法.png" alt="classList的用法"></p>
-<h2 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h2><h3 id="data-自定义属性名"><a href="#data-自定义属性名" class="headerlink" title="data-自定义属性名"></a>data-自定义属性名</h3><pre><code>data-属性名  支持大小写，但在获取的时候是通过小写来获取的。
-            属性名也可以用多个-分隔，在获取的时候需要将-去除，-后字母需要大写，类似于js中获取css属性
-</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">data-sex</span>=<span class="string">'girl'</span> <span class="attr">data-boyFriend</span>=<span class="string">'佐助'</span> <span class="attr">data-mother</span>=<span class="string">'泰罗奥特曼'</span> <span class="attr">data-cloth-green</span>=<span class="string">'绿裙子.绿鞋子,绿手套'</span> <span class="attr">data-cloth-red</span>=<span class="string">'红裙子,红裤子...'</span>&gt;</span>娜美<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> liObjs =  <span class="built_in">document</span>.querySelectorAll(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">var</span> nameiLi = liObjs[<span class="number">2</span>];</div><div class="line"><span class="built_in">console</span>.log(nameiLi.dataset);</div><div class="line"><span class="built_in">console</span>.log(nameiLi.dataset.mother);</div><div class="line"><span class="built_in">console</span>.log(nameiLi.dataset.boyFriend);</div><div class="line"><span class="built_in">console</span>.log(nameiLi.dataset.boyfriend);</div><div class="line"><span class="built_in">console</span>.log(nameiLi.dataset.clothGreen);</div><div class="line"><span class="built_in">console</span>.log(nameiLi.dataset[<span class="string">'clothGreen'</span>]);</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS3"><span class="toc-number">1.</span> <span class="toc-text">CSS3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3兄弟选择器"><span class="toc-number">1.1.</span> <span class="toc-text">CSS3兄弟选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3属性选择器"><span class="toc-number">1.2.</span> <span class="toc-text">CSS3属性选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伪类选择器"><span class="toc-number">1.3.</span> <span class="toc-text">伪类选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#first-child-匹配父元素的第一个子元素"><span class="toc-number">1.3.1.</span> <span class="toc-text">:first-child 匹配父元素的第一个子元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#last-child-匹配父元素的最后一个子元素"><span class="toc-number">1.3.2.</span> <span class="toc-text">:last-child 匹配父元素的最后一个子元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nth-child-表达式-通过表达式在父元素中查找索引为表达式的值的子元素"><span class="toc-number">1.3.3.</span> <span class="toc-text">:nth-child(表达式) 通过表达式在父元素中查找索引为表达式的值的子元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nth-of-type当父元素中包含不同标签时，推荐使用该伪元素"><span class="toc-number">1.3.4.</span> <span class="toc-text">:nth-of-type当父元素中包含不同标签时，推荐使用该伪元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伪元素选择器"><span class="toc-number">1.4.</span> <span class="toc-text">伪元素选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#first-letter-选取标签中的第一个元素"><span class="toc-number">1.4.1.</span> <span class="toc-text">::first-letter 选取标签中的第一个元素 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#first-line选取标签的第一个行元素"><span class="toc-number">1.4.2.</span> <span class="toc-text">::first-line选取标签的第一个行元素 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#placeholder设置输入框提示文字的样式"><span class="toc-number">1.4.3.</span> <span class="toc-text">::placeholder设置输入框提示文字的样式 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#selection设置对象被选择时的样式"><span class="toc-number">1.4.4.</span> <span class="toc-text">::selection设置对象被选择时的样式 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#before-after一般与content属性搭配使用-可在元素中根据所需位置添加内容"><span class="toc-number">1.4.5.</span> <span class="toc-text"> ::before``::after一般与content属性搭配使用,可在元素中根据所需位置添加内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#border-radius设置元素圆角"><span class="toc-number">1.5.</span> <span class="toc-text">border-radius设置元素圆角</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#text-shadow设置文本阴影"><span class="toc-number">1.6.</span> <span class="toc-text">text-shadow设置文本阴影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#box-shadow盒子阴影"><span class="toc-number">1.7.</span> <span class="toc-text">box-shadow盒子阴影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#两种方式设置颜色、透明度"><span class="toc-number">1.8.</span> <span class="toc-text">两种方式设置颜色、透明度</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-  
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2014/09/07/CSS3-1/" data-title="CSS3-1" data-url="http://yoursite.com/2014/09/07/CSS3-1/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2014/09/14/CSS3-2/" title="上一篇: CSS3-2">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2014/09/01/HTML5/" title="下一篇: HTML5标签">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2014/09/14/CSS3-2/">CSS3-2</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/07/CSS3-1/">CSS3-1</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/01/HTML5/">HTML5标签</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
