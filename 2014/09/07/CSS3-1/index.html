@@ -90,7 +90,7 @@
 
 示例代码 在class为.first之后的所有class为.meat的元素背景颜色会变为红色 需要注意的是,之前的并不会获取到1234567891011121314151617181920212223&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS3-1">
+<meta property="og:title" content="CSS3-01">
 <meta property="og:url" content="http://yoursite.com/2014/09/07/CSS3-1/index.html">
 <meta property="og:site_name" content="Link‘s 博客">
 <meta property="og:description" content="CSS3CSS3兄弟选择器
@@ -98,17 +98,17 @@
 
 
 示例代码 在class为.first之后的所有class为.meat的元素背景颜色会变为红色 需要注意的是,之前的并不会获取到1234567891011121314151617181920212223&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt">
-<meta property="og:image" content="http://yoursite.com/../img/属性选择器.png">
+<meta property="og:image" content="http://yoursite.com/../../img/属性选择器.png">
 <meta property="og:image" content="http://yoursite.com/../img/text-=shadow效果图.png">
-<meta property="og:updated_time" content="2017-01-19T05:42:46.000Z">
+<meta property="og:updated_time" content="2017-01-21T14:22:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS3-1">
+<meta name="twitter:title" content="CSS3-01">
 <meta name="twitter:description" content="CSS3CSS3兄弟选择器
 以选择器1~选择器2的形式，查找选择器1之后的所有选择器2
 
 
 示例代码 在class为.first之后的所有class为.meat的元素背景颜色会变为红色 需要注意的是,之前的并不会获取到1234567891011121314151617181920212223&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt">
-<meta name="twitter:image" content="http://yoursite.com/../img/属性选择器.png">
+<meta name="twitter:image" content="http://yoursite.com/../../img/属性选择器.png">
 
 
 
@@ -142,7 +142,7 @@
 
 
 
-  <title> CSS3-1 | Link‘s 博客 </title>
+  <title> CSS3-01 | Link‘s 博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -279,7 +279,7 @@
             
             
               
-                CSS3-1
+                CSS3-01
               
             
           </h1>
@@ -341,7 +341,7 @@
 <p><strong> 过渡效果 </strong></p>
 </blockquote>
 <p>transition: all 时间；<code>all</code>指的是所有的指定元素，<code>时间</code>指在该短时间内完成过渡效果<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">li:hover &#123;</div><div class="line">            background-color: #c20c0c;</div><div class="line">            transition: all 2s;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
-<h2 id="CSS3属性选择器"><a href="#CSS3属性选择器" class="headerlink" title="CSS3属性选择器"></a>CSS3属性选择器</h2><p><img src="../img/属性选择器.png" alt="属性选择器"></p>
+<h2 id="CSS3属性选择器"><a href="#CSS3属性选择器" class="headerlink" title="CSS3属性选择器"></a>CSS3属性选择器</h2><p><img src="../../img/属性选择器.png" alt="属性选择器"></p>
 <ul>
 <li>示例代码<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*选中带有方括号中属性的标签元素*/</span></div><div class="line">       <span class="selector-tag">p</span><span class="selector-attr">[class]</span> &#123;</div><div class="line">           <span class="attribute">background-color</span>: red;</div><div class="line">       &#125;</div><div class="line">       <span class="comment">/*选中属性名为cls1的标签元素*/</span></div><div class="line">       <span class="selector-tag">p</span><span class="selector-attr">[class="cls1"]</span> &#123;</div><div class="line">           <span class="attribute">background-color</span>: yellow;</div><div class="line">       &#125;</div><div class="line">       <span class="comment">/*该元素的属性名为空格分隔,选中的属性名包含其中就能获取该元素*/</span></div><div class="line">       <span class="selector-tag">p</span><span class="selector-attr">[class~="cls2"]</span> &#123;</div><div class="line">           <span class="attribute">background-color</span>: green;</div><div class="line">       &#125;</div><div class="line">       <span class="comment">/*通过以"cl"开头的属性名的属性来获取该元素*/</span></div><div class="line">       <span class="selector-tag">p</span><span class="selector-attr">[class^="cl"]</span> &#123;</div><div class="line">           <span class="attribute">background-color</span>: pink;</div><div class="line">       &#125;</div><div class="line">       <span class="comment">/*通过以3结尾的属性名来获取元素*/</span></div><div class="line">       <span class="selector-tag">p</span><span class="selector-attr">[class$="3"]</span> &#123;</div><div class="line">           <span class="attribute">background-color</span>: yellow;</div><div class="line">       &#125;</div><div class="line">       <span class="comment">/*通过属性名包含l的属性来获取元素*/</span></div><div class="line">       <span class="selector-tag">p</span><span class="selector-attr">[class*="l"]</span> &#123;</div><div class="line">           <span class="attribute">background-color</span>: red;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
 </li>
@@ -446,8 +446,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/09/01/HTML5/" rel="next" title="HTML5标签">
-                <i class="fa fa-chevron-left"></i> HTML5标签
+              <a href="/2014/09/01/HTML5/" rel="next" title="HTML5">
+                <i class="fa fa-chevron-left"></i> HTML5
               </a>
             
           </div>
@@ -456,8 +456,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2014/09/14/CSS3-2/" rel="prev" title="CSS3-2">
-                CSS3-2 <i class="fa fa-chevron-right"></i>
+              <a href="/2014/09/14/CSS3-2/" rel="prev" title="CSS3-02">
+                CSS3-02 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
