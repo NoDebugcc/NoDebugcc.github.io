@@ -1,0 +1,685 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="perspective 属性
+该属性使后代元素根据属性值呈现三维效果，远小近大，是给祖先元素添加该属性。
+
+注意：如果在实现三维特效时，出现不对称不均匀的情况，只需将该属性向上一父元素提升一级。
+
+
+先转后移与先移后转的区别
+先转后移
+transform:rotateY() translateZ(); 元素沿着Y轴转动，此时元素的x、y、z轴的方向就会发生变化，
+
+先移后转
+transform:t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3-03">
+<meta property="og:url" content="http://yoursite.com/2014/09/21/CSS3-03/index.html">
+<meta property="og:site_name" content="Link‘s 博客">
+<meta property="og:description" content="perspective 属性
+该属性使后代元素根据属性值呈现三维效果，远小近大，是给祖先元素添加该属性。
+
+注意：如果在实现三维特效时，出现不对称不均匀的情况，只需将该属性向上一父元素提升一级。
+
+
+先转后移与先移后转的区别
+先转后移
+transform:rotateY() translateZ(); 元素沿着Y轴转动，此时元素的x、y、z轴的方向就会发生变化，
+
+先移后转
+transform:t">
+<meta property="og:image" content="http://yoursite.com/../img/animation动画属性.png">
+<meta property="og:updated_time" content="2017-01-21T13:29:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3-03">
+<meta name="twitter:description" content="perspective 属性
+该属性使后代元素根据属性值呈现三维效果，远小近大，是给祖先元素添加该属性。
+
+注意：如果在实现三维特效时，出现不对称不均匀的情况，只需将该属性向上一父元素提升一级。
+
+
+先转后移与先移后转的区别
+先转后移
+transform:rotateY() translateZ(); 元素沿着Y轴转动，此时元素的x、y、z轴的方向就会发生变化，
+
+先移后转
+transform:t">
+<meta name="twitter:image" content="http://yoursite.com/../img/animation动画属性.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/09/21/CSS3-03/"/>
+
+
+
+
+
+  <title> CSS3-03 | Link‘s 博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Link‘s 博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/09/21/CSS3-03/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="CJ">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Link‘s 博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Link‘s 博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS3-03
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-09-21T00:00:00+08:00">
+                2014-09-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="perspective-属性"><a href="#perspective-属性" class="headerlink" title="perspective 属性"></a>perspective 属性</h2><ul>
+<li><p>该属性使后代元素根据属性值呈现三维效果，远小近大，是给祖先元素添加该属性。</p>
+</li>
+<li><p>注意：如果在实现三维特效时，出现不对称不均匀的情况，只需将该属性向上一父元素提升一级。</p>
+</li>
+</ul>
+<h2 id="先转后移与先移后转的区别"><a href="#先转后移与先移后转的区别" class="headerlink" title="先转后移与先移后转的区别"></a>先转后移与先移后转的区别</h2><ul>
+<li><p>先转后移</p>
+<pre><code>transform:rotateY() translateZ(); 元素沿着Y轴转动，此时元素的x、y、z轴的方向就会发生变化，
+</code></pre></li>
+<li><p>先移后转</p>
+<pre><code>transform:translateZ()rotateY(); 元素先沿着Z轴方向移动，以原来的x、y、z轴的方向再沿着Y轴进行转动
+</code></pre></li>
+</ul>
+<h2 id="transform-style-preserve-3d"><a href="#transform-style-preserve-3d" class="headerlink" title="transform-style: preserve-3d;"></a>transform-style: preserve-3d;</h2><pre><code>因为3d效果比较消耗性能，所以浏览器默认关闭该性能，如需要3d效果，则必须为需要3d效果的父元素加上`transform-style:preserve-3d;`手动开启3d渲染效果；
+</code></pre><h2 id="CSS3动画属性"><a href="#CSS3动画属性" class="headerlink" title="CSS3动画属性"></a>CSS3动画属性</h2><ul>
+<li><p>属性值</p>
+<p>  <img src="../img/animation动画属性.png" alt="属性值"></p>
+</li>
+<li><p>示例代码</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*动画的两个步骤：定义动画，设置动画*/</span></div><div class="line">    @<span class="keyword">keyframes</span>  autoMove &#123;</div><div class="line">        <span class="selector-tag">from</span>&#123;&#125;</div><div class="line">        <span class="selector-tag">to</span> &#123;</div><div class="line">            <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(360deg);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="selector-class">.animate</span> &#123;</div><div class="line">        <span class="comment">/*动画的名字*/</span></div><div class="line">        <span class="attribute">animation-name</span>: autoMove;</div><div class="line">        <span class="comment">/*执行这段动画所需要的时间*/</span></div><div class="line">        <span class="attribute">animation-duration</span>: <span class="number">2s</span>;</div><div class="line">        <span class="comment">/*动画的线型*/</span></div><div class="line">        <span class="attribute">animation-timing-function</span>: linear;</div><div class="line">        <span class="comment">/*动画所执行的次数  infinite无穷次*/</span></div><div class="line">        <span class="attribute">animation-iteration-count</span>: infinite;</div><div class="line">        <span class="comment">/*动画的播放状态*/</span></div><div class="line">        <span class="attribute">animation-play-state</span>: running;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.cls</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">        <span class="comment">/*暂停*/</span></div><div class="line">        <span class="attribute">animation-play-state</span>: paused;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>动画的连写形式<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 支持复合写法</span></div><div class="line">            写法 非常的 随意</div><div class="line">            第一个出现的时间 是 持续时间</div><div class="line">            第二个出现的时间是 延迟时间</div><div class="line">            其他的属性值 顺序 没有任何要求</div><div class="line">        */</div><div class="line"></div><div class="line">        <span class="selector-tag">animation</span>: 2<span class="selector-tag">s</span> <span class="selector-tag">autoMove</span>  <span class="selector-tag">linear</span> <span class="selector-tag">infinite</span> ;</div><div class="line">    当出现两个动画时，后者动画会覆盖前者动画，故可以写成以下连写形式</div><div class="line">        <span class="selector-class">.animate-togetger</span> &#123;</div><div class="line">            <span class="attribute">animation</span>: autoJump <span class="number">1s</span> infinite <span class="built_in">steps</span>(8),autoMove <span class="number">10s</span> infinite;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="弹性布局的使用"><a href="#弹性布局的使用" class="headerlink" title="弹性布局的使用"></a>弹性布局的使用</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span> &#123;</div><div class="line">           <span class="attribute">width</span>: <span class="number">600px</span>;</div><div class="line">           <span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">           <span class="comment">/*弹性布局*/</span></div><div class="line">           <span class="attribute">display</span>: flex;</div><div class="line">           <span class="comment">/*设置主轴  从左到右  x轴的方向*/</span></div><div class="line">           <span class="comment">/*flex-end:主轴的末尾*/</span></div><div class="line">           <span class="comment">/*flex-start:主轴的开始*/</span></div><div class="line">           <span class="comment">/*space-around:会预留一些间隙*/</span></div><div class="line">           <span class="comment">/*space-between: 会预留一些空隙，但两边定格*/</span></div><div class="line">           <span class="attribute">justify-content</span>: space-between;</div><div class="line">           <span class="comment">/*设置副轴 从上到下  y轴的方向*/</span></div><div class="line">           <span class="comment">/*flex-end:副轴的末尾*/</span></div><div class="line">           <span class="comment">/*flex-start:副轴的开始*/</span></div><div class="line">           <span class="comment">/*center:副轴的中心*/</span></div><div class="line">           <span class="attribute">align-items</span>: center;</div><div class="line">           <span class="attribute">border</span>: <span class="number">1px</span> solid black; </div><div class="line">       &#125;</div><div class="line">       <span class="selector-tag">li</span> &#123;</div><div class="line">           <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">           <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">           <span class="attribute">border</span>: <span class="number">1px</span> solid black;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/09/14/CSS3-2/" rel="next" title="CSS3-2">
+                <i class="fa fa-chevron-left"></i> CSS3-2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CJ" />
+          <p class="site-author-name" itemprop="name">CJ</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#perspective-属性"><span class="nav-number">1.</span> <span class="nav-text">perspective 属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先转后移与先移后转的区别"><span class="nav-number">2.</span> <span class="nav-text">先转后移与先移后转的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform-style-preserve-3d"><span class="nav-number">3.</span> <span class="nav-text">transform-style: preserve-3d;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3动画属性"><span class="nav-number">4.</span> <span class="nav-text">CSS3动画属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弹性布局的使用"><span class="nav-number">5.</span> <span class="nav-text">弹性布局的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CJ</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
