@@ -1,0 +1,683 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="弹性布局为父元素添加display=flex可为该元素下的子元素进行页面布局
+弹性布局分为主轴和副轴
+
+主轴即为横向X轴，向左方向即是正方向，向右方向为负方向在主轴方向的布局属性有justify-content
+
+副轴即为竖向Y轴，向下方向即为正方向，向上方向即为负方向为父元素添加的属性为align-items
+
+
+
+   同时子元素通过align-self属性自己也可以设置其在父元素中副轴的位置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3-04  弹性布局 backface-visibility fullpage.js插件 swiper.js插件">
+<meta property="og:url" content="http://yoursite.com/2014/10/02/css3-04/index.html">
+<meta property="og:site_name" content="Link‘s 博客">
+<meta property="og:description" content="弹性布局为父元素添加display=flex可为该元素下的子元素进行页面布局
+弹性布局分为主轴和副轴
+
+主轴即为横向X轴，向左方向即是正方向，向右方向为负方向在主轴方向的布局属性有justify-content
+
+副轴即为竖向Y轴，向下方向即为正方向，向上方向即为负方向为父元素添加的属性为align-items
+
+
+
+   同时子元素通过align-self属性自己也可以设置其在父元素中副轴的位置">
+<meta property="og:image" content="http://yoursite.com/Users/chenjun/Desktop/作业/第26天_CSS3/笔记/img/justify-content取值.png">
+<meta property="og:image" content="http://yoursite.com/../img/align-items取值.png">
+<meta property="og:image" content="http://yoursite.com/Users/chenjun/Desktop/作业/第26天_CSS3/笔记/img/flex-wrap取值.png">
+<meta property="og:image" content="http://yoursite.com/Users/chenjun/Desktop/作业/第26天_CSS3/笔记/img/flex-direction取值.png">
+<meta property="og:updated_time" content="2017-02-09T08:50:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3-04  弹性布局 backface-visibility fullpage.js插件 swiper.js插件">
+<meta name="twitter:description" content="弹性布局为父元素添加display=flex可为该元素下的子元素进行页面布局
+弹性布局分为主轴和副轴
+
+主轴即为横向X轴，向左方向即是正方向，向右方向为负方向在主轴方向的布局属性有justify-content
+
+副轴即为竖向Y轴，向下方向即为正方向，向上方向即为负方向为父元素添加的属性为align-items
+
+
+
+   同时子元素通过align-self属性自己也可以设置其在父元素中副轴的位置">
+<meta name="twitter:image" content="http://yoursite.com/Users/chenjun/Desktop/作业/第26天_CSS3/笔记/img/justify-content取值.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/10/02/css3-04/"/>
+
+
+
+
+
+  <title> CSS3-04  弹性布局 backface-visibility fullpage.js插件 swiper.js插件 | Link‘s 博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Link‘s 博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/10/02/css3-04/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="CJ">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Link‘s 博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Link‘s 博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS3-04  弹性布局 backface-visibility fullpage.js插件 swiper.js插件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-10-02T00:00:00+08:00">
+                2014-10-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="弹性布局"><a href="#弹性布局" class="headerlink" title="弹性布局"></a>弹性布局</h2><p>为父元素添加<code>display=flex</code>可为该元素下的子元素进行页面布局</p>
+<p>弹性布局分为<strong>主轴</strong>和<strong>副轴</strong></p>
+<ul>
+<li><p>主轴<br>即为横向X轴，向左方向即是正方向，向右方向为负方向<br>在主轴方向的布局属性有<code>justify-content</code><br><img src="/Users/chenjun/Desktop/作业/第26天_CSS3/笔记/img/justify-content取值.png" alt="justify-content取值"></p>
+</li>
+<li><p>副轴<br>即为竖向Y轴，向下方向即为正方向，向上方向即为负方向<br>为父元素添加的属性为<code>align-items</code></p>
+<p><img src="../img/align-items取值.png" alt="align-items取值"></p>
+</li>
+</ul>
+<p>   同时子元素通过<code>align-self</code>属性自己也可以设置其在父元素中副轴的位置</p>
+<ul>
+<li><p><code>flex-wrap</code>多用于弹性布局换行</p>
+<p><img src="/Users/chenjun/Desktop/作业/第26天_CSS3/笔记/img/flex-wrap取值.png" alt="flex-wrap取值"></p>
+</li>
+<li><p><code>flex</code>属性多用于通过宽度占比将子元素横向分布在父元素中，<strong>为子元素添加该属性后，子元素在父元素中一定不会换行</strong></p>
+<p>取值一般为数字</p>
+</li>
+<li><p><code>flex-direction</code>属性可修改父元素的主轴方向</p>
+<p><img src="/Users/chenjun/Desktop/作业/第26天_CSS3/笔记/img/flex-direction取值.png" alt="flex-direction取值"></p>
+<p>column属性值可将主轴方向由横向变为竖向，副轴方向由竖向变为横向</p>
+</li>
+<li><p>在弹性布局中可发生嵌套关系，即<code>设置了弹性布局的父元素中的一个子元素也可设置弹性布局</code></p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="backface-visibility"><a href="#backface-visibility" class="headerlink" title="backface-visibility"></a>backface-visibility</h2><p>在3d变换中，会有些元素显示背景，遮挡视野，此时可使用该属性取值为<code>hidden</code>将背景内容进行隐藏</p>
+<h2 id="fullpage-js插件"><a href="#fullpage-js插件" class="headerlink" title="fullpage.js插件"></a>fullpage.js插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站，主要功能有：</div><div class="line">	支持鼠标滚动</div><div class="line">	支持前进后退和键盘控制</div><div class="line">	多个回调函数</div><div class="line">	支持手机、平板触摸事件</div><div class="line">	支持 CSS3 动画</div><div class="line">	支持窗口缩放</div><div class="line">	窗口缩放时自动调整</div><div class="line">	可设置滚动宽度、背景颜色、滚动速度、循环选项、回调、文本对齐方式等等</div><div class="line"></div><div class="line">大致步骤分为：1、导入jq文件</div><div class="line">			2、导入fullpage.js文件</div><div class="line">			3、调用方法</div></pre></td></tr></table></figure>
+<h2 id="swiper-js插件"><a href="#swiper-js插件" class="headerlink" title="swiper.js插件"></a>swiper.js插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Swiper常用于移动端网站的内容触摸滑动</div><div class="line"></div><div class="line">Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。</div><div class="line"></div><div class="line">Swiper能实现触屏焦点图、触屏Tab切换、触屏多图切换等常用效果。</div><div class="line"></div><div class="line">在官网的API文档中讲解如何使用该插件，同时如果该插件需要应用于pc端，则需要加入鼠标控制方法</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/09/21/CSS3-03/" rel="next" title="CSS3-03">
+                <i class="fa fa-chevron-left"></i> CSS3-03
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CJ" />
+          <p class="site-author-name" itemprop="name">CJ</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#弹性布局"><span class="nav-number">1.</span> <span class="nav-text">弹性布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#backface-visibility"><span class="nav-number">2.</span> <span class="nav-text">backface-visibility</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fullpage-js插件"><span class="nav-number">3.</span> <span class="nav-text">fullpage.js插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swiper-js插件"><span class="nav-number">4.</span> <span class="nav-text">swiper.js插件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CJ</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
